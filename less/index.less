@@ -106,12 +106,21 @@ header {
 		
 		.centered-space-around();
 
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
+
 		a {
 			padding: 0 2%;
 			color: darkorchid;
 			text-decoration: none;
 			font-size: @normal-font-size;
 			font-family: @main-font;
+
+			@media (max-width: 500px) {
+				margin: @vertical-margin;
+			}
 		}
 
 		a:hover {
@@ -124,6 +133,11 @@ header {
 	
 	.centered-space-around();
 
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
 	.intro-p {
 		width: 49%;
 		color: @main-font-color;
@@ -131,18 +145,31 @@ header {
 		flex-direction: column;
 		align-items: center;
 
+		@media (max-width: 500px) {
+			width: 80%;
+		}
+
 		h1 {
 			font-size: 2.6rem;
 			font-family: @main-font;
 			padding: 2%;
 			width: 80%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 		}
 
 		p {
 			padding: 2%;
 			width: 80%;
+			line-height: 2rem;
 			
 			.main-font-style();
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -161,6 +188,11 @@ header {
 	justify-content: space-around;
 	margin: @vertical-margin;
 
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+	}
+
 	div {
 		width: 49%;
 		color: @main-font-color;
@@ -175,11 +207,19 @@ header {
 			font-family: @main-font;
 			margin: @vertical-margin;
 			width: 60%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 		}
 
 		ul {
 			margin: 0 3%;
 			width: 60%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 		
 			li {
 				padding: 1% 0;

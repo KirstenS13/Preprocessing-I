@@ -156,12 +156,23 @@ header nav {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
 header nav a {
   padding: 0 2%;
   color: darkorchid;
   text-decoration: none;
   font-size: 1.6rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  header nav a {
+    margin: 2% 0;
+  }
 }
 header nav a:hover {
   color: orchid;
@@ -171,6 +182,12 @@ header nav a:hover {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .intro-section .intro-p {
   width: 49%;
   color: darkmagenta;
@@ -178,17 +195,33 @@ header nav a:hover {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .intro-section .intro-p {
+    width: 80%;
+  }
+}
 .intro-section .intro-p h1 {
   font-size: 2.6rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding: 2%;
   width: 80%;
 }
+@media (max-width: 500px) {
+  .intro-section .intro-p h1 {
+    width: 100%;
+  }
+}
 .intro-section .intro-p p {
   padding: 2%;
   width: 80%;
+  line-height: 2rem;
   font-size: 1.6rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-p p {
+    width: 100%;
+  }
 }
 .intro-section .intro-img {
   width: 49%;
@@ -201,6 +234,12 @@ header nav a:hover {
   display: flex;
   justify-content: space-around;
   margin: 2% 0;
+}
+@media (max-width: 500px) {
+  .skills-history-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .skills-history-section div {
   width: 49%;
@@ -217,9 +256,19 @@ header nav a:hover {
   margin: 2% 0;
   width: 60%;
 }
+@media (max-width: 500px) {
+  .skills-history-section div h2 {
+    width: 100%;
+  }
+}
 .skills-history-section div ul {
   margin: 0 3%;
   width: 60%;
+}
+@media (max-width: 500px) {
+  .skills-history-section div ul {
+    width: 100%;
+  }
 }
 .skills-history-section div ul li {
   padding: 1% 0;
