@@ -134,20 +134,68 @@ html,
 body {
   height: 100%;
 }
+/* Beginning of my code */
+section,
+header,
+div,
+p,
+h1,
+h2,
+img,
+nav,
+a {
+  border: 1px solid purple;
+}
+html {
+  font-size: 62.5%;
+}
 body {
+  font-size: 1.6rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin: auto;
+  width: 80%;
 }
 header {
   display: flex;
   justify-content: center;
 }
+header nav {
+  margin: 2%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav a {
+  padding: 0 2%;
+  color: darkorchid;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: orchid;
+}
 .intro-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 .intro-section div {
   width: 49%;
 }
 .intro-section div img {
-  width: 70%;
+  width: 100%;
+}
+.skills-history-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills-history-section div {
+  width: 49%;
+}
+.contact-info {
+  text-align: center;
+}
+.attribution {
+  text-align: center;
 }
