@@ -134,3 +134,20 @@ html,
 body {
   height: 100%;
 }
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+}
+.intro-section div {
+  width: 49%;
+}
+.intro-section div img {
+  width: 70%;
+}
