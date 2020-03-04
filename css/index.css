@@ -145,6 +145,11 @@ body {
   margin: auto;
   width: 80%;
 }
+@media (max-width: 500px) {
+  body {
+    width: 90%;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -197,7 +202,7 @@ header nav a:hover {
 }
 @media (max-width: 500px) {
   .intro-section .intro-p {
-    width: 80%;
+    width: 100%;
   }
 }
 .intro-section .intro-p h1 {
@@ -221,14 +226,25 @@ header nav a:hover {
 @media (max-width: 500px) {
   .intro-section .intro-p p {
     width: 100%;
+    padding: 2%;
   }
 }
 .intro-section .intro-img {
   width: 49%;
 }
+@media (max-width: 500px) {
+  .intro-section .intro-img {
+    width: 100%;
+  }
+}
 .intro-section .intro-img img {
   width: 100%;
   border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-img img {
+    padding: 4% 0;
+  }
 }
 .skills-history-section {
   display: flex;
@@ -239,6 +255,7 @@ header nav a:hover {
   .skills-history-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 .skills-history-section div {
@@ -249,6 +266,11 @@ header nav a:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .skills-history-section div {
+    width: 90%;
+  }
 }
 .skills-history-section div h2 {
   font-size: 2rem;

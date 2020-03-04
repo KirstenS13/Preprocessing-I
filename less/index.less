@@ -94,6 +94,10 @@ html {
 body {
 	margin: auto;
 	width: 80%;
+
+	@media (max-width: 500px) {
+		width: 90%;
+	}
 }
 
 header {
@@ -146,7 +150,7 @@ header {
 		align-items: center;
 
 		@media (max-width: 500px) {
-			width: 80%;
+			width: 100%;
 		}
 
 		h1 {
@@ -169,6 +173,7 @@ header {
 
 			@media (max-width: 500px) {
 				width: 100%;
+				padding: 2%;
 			}
 		}
 	}
@@ -176,9 +181,17 @@ header {
 	.intro-img {
 		width: 49%;
 
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+
 		img {
 			width: 100%;
 			border-radius: 50%;
+
+			@media (max-width: 500px) {
+				padding: 4% 0;
+			}
 		}
 	}
 }
@@ -191,6 +204,7 @@ header {
 	@media (max-width: 500px) {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
 
 	div {
@@ -201,6 +215,10 @@ header {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
+
+		@media (max-width: 500px) {
+			width: 90%;
+		}
 
 		h2 {
 			font-size: @h2-font-size;
