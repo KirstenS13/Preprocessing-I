@@ -59,6 +59,30 @@ html, body {
 
 /* Beginning of my code */
 
+// variables
+
+@main-font-color: darkmagenta;
+@second-font-color: orchid;
+@vertical-margin: 2% 0;
+@normal-font-size: 1.6rem;
+@h2-font-size: 2rem;
+@main-font: "Trebuchet MS", Helvetica, sans-serif;
+
+//mixins
+
+.main-font-style() {
+	font-size: @normal-font-size;
+	font-family: @main-font;
+}
+
+.centered-space-around() {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+// code
+
 section, header, div, p, h1, h2, img, nav, a {
 	border: 1px solid purple;
 }
@@ -68,8 +92,6 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	margin: auto;
 	width: 80%;
 }
@@ -79,31 +101,44 @@ header {
 	justify-content: center;
 
 	nav {
-		margin: 2%;
+		margin: @vertical-margin;
 		width: 80%;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		
+		.centered-space-around();
 
 		a {
 			padding: 0 2%;
 			color: darkorchid;
 			text-decoration: none;
+			font-size: @normal-font-size;
+			font-family: @main-font;
 		}
 
 		a:hover {
-			color: orchid;
+			color:@second-font-color;
 		}
 	}
 }
 
 .intro-section {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	
+	.centered-space-around();
 
 	div {
 		width: 49%;
+		color: @main-font-color;
+
+		h1 {
+			font-size: 2.6rem;
+			font-family: @main-font;
+			padding: 2% 0;
+		}
+
+		p {
+			padding: 2% 0;
+			
+			.main-font-style();
+		}
 
 		img {
 			width: 100%;
@@ -114,17 +149,55 @@ header {
 .skills-history-section {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	margin: @vertical-margin;
 
 	div {
 		width: 49%;
+		color: @main-font-color;
+		margin: @vertical-margin;
+
+		h2 {
+			font-size: @h2-font-size;
+			font-family: @main-font;
+			margin: @vertical-margin;
+		}
+
+		ul {
+			margin: 0 3%;
+		
+			li {
+				padding: 1% 0;
+				list-style-type: square;
+				line-height: 2rem;
+	
+				.main-font-style();
+			}
+		}
 	}
 }
 
 .contact-info {
 	text-align: center;
+	color: @main-font-color;
+	margin: @vertical-margin;
+
+	h2 {
+		font-size: @h2-font-size;
+		font-family: @main-font;
+		margin: @vertical-margin;
+	}
+
+	p {
+		padding: 1% 0;
+
+		.main-font-style();
+	}
 }
 
 .attribution {
 	text-align: center;
+	color: @second-font-color;
+	margin: @vertical-margin;
+	
+	.main-font-style();
 }
