@@ -135,17 +135,9 @@ body {
   height: 100%;
 }
 /* Beginning of my code */
-section,
-header,
-div,
-p,
-h1,
-h2,
-img,
-nav,
-a {
-  border: 1px solid purple;
-}
+/* section, header, div, p, h1, h2, img, nav, a, ul {
+	border: 1px solid purple;
+} */
 html {
   font-size: 62.5%;
 }
@@ -179,22 +171,31 @@ header nav a:hover {
   justify-content: space-around;
   align-items: center;
 }
-.intro-section div {
+.intro-section .intro-p {
   width: 49%;
   color: darkmagenta;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.intro-section div h1 {
+.intro-section .intro-p h1 {
   font-size: 2.6rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  padding: 2% 0;
+  padding: 2%;
+  width: 80%;
 }
-.intro-section div p {
-  padding: 2% 0;
+.intro-section .intro-p p {
+  padding: 2%;
+  width: 80%;
   font-size: 1.6rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-.intro-section div img {
+.intro-section .intro-img {
+  width: 49%;
+}
+.intro-section .intro-img img {
   width: 100%;
+  border-radius: 50%;
 }
 .skills-history-section {
   display: flex;
@@ -205,14 +206,20 @@ header nav a:hover {
   width: 49%;
   color: darkmagenta;
   margin: 2% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .skills-history-section div h2 {
   font-size: 2rem;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   margin: 2% 0;
+  width: 60%;
 }
 .skills-history-section div ul {
   margin: 0 3%;
+  width: 60%;
 }
 .skills-history-section div ul li {
   padding: 1% 0;

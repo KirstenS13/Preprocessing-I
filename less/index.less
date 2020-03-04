@@ -83,9 +83,9 @@ html, body {
 
 // code
 
-section, header, div, p, h1, h2, img, nav, a {
+/* section, header, div, p, h1, h2, img, nav, a, ul {
 	border: 1px solid purple;
-}
+} */
 
 html {
 	font-size: 62.5%;
@@ -124,24 +124,34 @@ header {
 	
 	.centered-space-around();
 
-	div {
+	.intro-p {
 		width: 49%;
 		color: @main-font-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		h1 {
 			font-size: 2.6rem;
 			font-family: @main-font;
-			padding: 2% 0;
+			padding: 2%;
+			width: 80%;
 		}
 
 		p {
-			padding: 2% 0;
+			padding: 2%;
+			width: 80%;
 			
 			.main-font-style();
 		}
+	}
+
+	.intro-img {
+		width: 49%;
 
 		img {
 			width: 100%;
+			border-radius: 50%;
 		}
 	}
 }
@@ -155,15 +165,21 @@ header {
 		width: 49%;
 		color: @main-font-color;
 		margin: @vertical-margin;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
 
 		h2 {
 			font-size: @h2-font-size;
 			font-family: @main-font;
 			margin: @vertical-margin;
+			width: 60%;
 		}
 
 		ul {
 			margin: 0 3%;
+			width: 60%;
 		
 			li {
 				padding: 1% 0;
