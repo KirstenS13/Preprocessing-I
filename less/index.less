@@ -61,12 +61,13 @@ html, body {
 
 // variables
 
-@main-font-color: darkmagenta;
-@second-font-color: orchid;
-@vertical-margin: 2% 0;
+@main-font-color: darkgreen;
+@second-font-color: forestgreen;
+@vertical-padding: 3% 0;
 @normal-font-size: 1.6rem;
 @h2-font-size: 2rem;
 @main-font: "Trebuchet MS", Helvetica, sans-serif;
+@bottom-border: 1px solid @main-font-color;
 
 //mixins
 
@@ -101,11 +102,10 @@ body {
 }
 
 header {
-	display: flex;
-	justify-content: center;
+	.centered-space-around();
 
 	nav {
-		margin: @vertical-margin;
+		padding: @vertical-padding;
 		width: 80%;
 		
 		.centered-space-around();
@@ -113,22 +113,27 @@ header {
 		@media (max-width: 500px) {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
+			text-align: center;
 		}
 
 		a {
-			padding: 0 2%;
-			color: darkorchid;
+			padding: 2%;
+			color: @main-font-color;
 			text-decoration: none;
 			font-size: @normal-font-size;
 			font-family: @main-font;
 
 			@media (max-width: 500px) {
-				margin: @vertical-margin;
+				padding: @vertical-padding;
+				width: 100%;
+				border-bottom: @bottom-border;
 			}
 		}
 
 		a:hover {
 			color:@second-font-color;
+			background-color: whitesmoke;
 		}
 	}
 }
@@ -199,7 +204,7 @@ header {
 .skills-history-section {
 	display: flex;
 	justify-content: space-around;
-	margin: @vertical-margin;
+	padding: @vertical-padding;
 
 	@media (max-width: 500px) {
 		display: flex;
@@ -210,7 +215,7 @@ header {
 	div {
 		width: 49%;
 		color: @main-font-color;
-		margin: @vertical-margin;
+		padding: @vertical-padding;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -218,31 +223,34 @@ header {
 
 		@media (max-width: 500px) {
 			width: 90%;
+			padding-bottom: 3%;
 		}
 
 		h2 {
 			font-size: @h2-font-size;
 			font-family: @main-font;
-			margin: @vertical-margin;
+			padding: @vertical-padding;
 			width: 60%;
+			border-bottom: @bottom-border;
 
 			@media (max-width: 500px) {
 				width: 100%;
+				
 			}
 		}
 
 		ul {
-			margin: 0 3%;
-			width: 60%;
+			width: 50%;
+			padding: @vertical-padding;
 
 			@media (max-width: 500px) {
-				width: 100%;
+				width: 90%;
 			}
 		
 			li {
 				padding: 1% 0;
 				list-style-type: square;
-				line-height: 2rem;
+				line-height: 2.5rem;
 	
 				.main-font-style();
 			}
@@ -253,12 +261,12 @@ header {
 .contact-info {
 	text-align: center;
 	color: @main-font-color;
-	margin: @vertical-margin;
+	padding: @vertical-padding;
 
 	h2 {
 		font-size: @h2-font-size;
 		font-family: @main-font;
-		margin: @vertical-margin;
+		padding: @vertical-padding;
 	}
 
 	p {
@@ -271,7 +279,11 @@ header {
 .attribution {
 	text-align: center;
 	color: @second-font-color;
-	margin: @vertical-margin;
+	padding: @vertical-padding;
 	
 	.main-font-style();
+
+	@media (max-width: 500px) {
+		padding-bottom: 3%;
+	}
 }
