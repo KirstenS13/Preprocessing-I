@@ -1,1 +1,336 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* Beginning of my code */
+/* section, header, div, p, h1, h2, img, nav, a, ul {
+	border: 1px solid purple;
+} */
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: auto;
+  width: 80%;
+}
+@media (max-width: 500px) {
+  body {
+    width: 90%;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav {
+  padding: 3% 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+header nav a {
+  padding: 2%;
+  color: darkgreen;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 3% 0;
+    width: 100%;
+    border-bottom: 1px solid darkgreen;
+  }
+}
+header nav a:hover {
+  color: forestgreen;
+  background-color: whitesmoke;
+}
+.intro-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.intro-section .intro-p {
+  width: 49%;
+  color: darkgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-p {
+    width: 100%;
+  }
+}
+.intro-section .intro-p h1 {
+  font-size: 2.6rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 2%;
+  width: 80%;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-p h1 {
+    width: 100%;
+  }
+}
+.intro-section .intro-p p {
+  padding: 2%;
+  width: 80%;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-p p {
+    width: 100%;
+    padding: 2%;
+  }
+}
+.intro-section .intro-img {
+  width: 49%;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-img {
+    width: 100%;
+  }
+}
+.intro-section .intro-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .intro-section .intro-img img {
+    padding: 4% 0;
+  }
+}
+.skills-history-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 3% 0;
+}
+@media (max-width: 500px) {
+  .skills-history-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.skills-history-section div {
+  width: 49%;
+  color: darkgreen;
+  padding: 3% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .skills-history-section div {
+    width: 90%;
+    padding-bottom: 3%;
+  }
+}
+.skills-history-section div h2 {
+  font-size: 2rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 3% 0;
+  width: 60%;
+  border-bottom: 1px solid darkgreen;
+}
+@media (max-width: 500px) {
+  .skills-history-section div h2 {
+    width: 100%;
+  }
+}
+.skills-history-section div ul {
+  width: 50%;
+  padding: 3% 0;
+}
+@media (max-width: 500px) {
+  .skills-history-section div ul {
+    width: 90%;
+  }
+}
+.skills-history-section div ul li {
+  padding: 1% 0;
+  list-style-type: square;
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.contact-info {
+  text-align: center;
+  color: darkgreen;
+  padding: 3% 0;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 3% 0;
+}
+.contact-info p {
+  padding: 1% 0;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.attribution {
+  text-align: center;
+  color: forestgreen;
+  padding: 3% 0;
+  font-size: 1.6rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  .attribution {
+    padding-bottom: 3%;
+  }
+}

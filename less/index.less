@@ -57,3 +57,233 @@ html, body {
     height: 100%;
 }
 
+/* Beginning of my code */
+
+// variables
+
+@main-font-color: darkgreen;
+@second-font-color: forestgreen;
+@vertical-padding: 3% 0;
+@normal-font-size: 1.6rem;
+@h2-font-size: 2rem;
+@main-font: "Trebuchet MS", Helvetica, sans-serif;
+@bottom-border: 1px solid @main-font-color;
+
+//mixins
+
+.main-font-style() {
+	font-size: @normal-font-size;
+	font-family: @main-font;
+}
+
+.centered-space-around() {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+// code
+
+/* section, header, div, p, h1, h2, img, nav, a, ul {
+	border: 1px solid purple;
+} */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: auto;
+	width: 80%;
+
+	@media (max-width: 500px) {
+		width: 90%;
+	}
+}
+
+header {
+	.centered-space-around();
+
+	nav {
+		padding: @vertical-padding;
+		width: 80%;
+		
+		.centered-space-around();
+
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		a {
+			padding: 2%;
+			color: @main-font-color;
+			text-decoration: none;
+			font-size: @normal-font-size;
+			font-family: @main-font;
+
+			@media (max-width: 500px) {
+				padding: @vertical-padding;
+				width: 100%;
+				border-bottom: @bottom-border;
+			}
+		}
+
+		a:hover {
+			color:@second-font-color;
+			background-color: whitesmoke;
+		}
+	}
+}
+
+.intro-section {
+	
+	.centered-space-around();
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.intro-p {
+		width: 49%;
+		color: @main-font-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 2.6rem;
+			font-family: @main-font;
+			padding: 2%;
+			width: 80%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
+		}
+
+		p {
+			padding: 2%;
+			width: 80%;
+			line-height: 2rem;
+			
+			.main-font-style();
+
+			@media (max-width: 500px) {
+				width: 100%;
+				padding: 2%;
+			}
+		}
+	}
+
+	.intro-img {
+		width: 49%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+
+		img {
+			width: 100%;
+			border-radius: 50%;
+
+			@media (max-width: 500px) {
+				padding: 4% 0;
+			}
+		}
+	}
+}
+
+.skills-history-section {
+	display: flex;
+	justify-content: space-around;
+	padding: @vertical-padding;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	div {
+		width: 49%;
+		color: @main-font-color;
+		padding: @vertical-padding;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
+		@media (max-width: 500px) {
+			width: 90%;
+			padding-bottom: 3%;
+		}
+
+		h2 {
+			font-size: @h2-font-size;
+			font-family: @main-font;
+			padding: @vertical-padding;
+			width: 60%;
+			border-bottom: @bottom-border;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				
+			}
+		}
+
+		ul {
+			width: 50%;
+			padding: @vertical-padding;
+
+			@media (max-width: 500px) {
+				width: 90%;
+			}
+		
+			li {
+				padding: 1% 0;
+				list-style-type: square;
+				line-height: 2.5rem;
+	
+				.main-font-style();
+			}
+		}
+	}
+}
+
+.contact-info {
+	text-align: center;
+	color: @main-font-color;
+	padding: @vertical-padding;
+
+	h2 {
+		font-size: @h2-font-size;
+		font-family: @main-font;
+		padding: @vertical-padding;
+	}
+
+	p {
+		padding: 1% 0;
+
+		.main-font-style();
+	}
+}
+
+.attribution {
+	text-align: center;
+	color: @second-font-color;
+	padding: @vertical-padding;
+	
+	.main-font-style();
+
+	@media (max-width: 500px) {
+		padding-bottom: 3%;
+	}
+}
